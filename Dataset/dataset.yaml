@@ -1,0 +1,4 @@
+train: C:/Users/daniel/Downloads/ImgST/Recortes/Dataset/train/
+val: C:/Users/daniel/Downloads/ImgST/Recortes/Dataset/val/
+nc: 1
+names: ["verde"]
