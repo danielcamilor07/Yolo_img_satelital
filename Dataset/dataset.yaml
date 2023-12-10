@@ -1,4 +1,4 @@
-train: C:/Users/daniel/Downloads/ImgST/Recortes/Dataset/train/
-val: C:/Users/daniel/Downloads/ImgST/Recortes/Dataset/val/
+train: /content/Yolo_img_satelital/Dataset/train/
+val: /content/Yolo_img_satelital/Dataset/val/
 nc: 1
-names: ["verde"]
+names: ["zona_verde"]
