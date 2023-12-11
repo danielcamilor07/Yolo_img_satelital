@@ -11,11 +11,13 @@
 
 Enlace de google colab:https://colab.research.google.com/drive/1f41yXjDMULqcaTgASFhktEyhAHbaemPZ?usp=sharing
 
-<div style="font-size: 5px;">Mediante el software libre llamado SAS Planet, exportamos imagenes del satelite de google earth, ampliamos la zona de interes con un zoom de 19, y delimitamos la zona en base a la resolución de la pantalla para tener siempre la misma dimensión al exportarse.</div>
+<div style="font-size: 5px;">Se recopilo un conjunto de datos de imágenes de zonas urbanas con vegetación de algunas ciudades de Colombia, a través del software SASPlanet, que permite elegir varios satélites para descargar imágenes de alta resolución; en esta oportunidad se utiliza el satélite de Google. Se descargan aproximadamente 52 imágenes de ciudades del territorio Colombiano como Bogotá, Bucaramanga, Cúcuta entra otras, con unas dimensiones de 5333 pixeles de ancho y 2573 pixeles de alto, con una resolución de 96 ppp y una profundidad de 24 bits, en formato JPG, mediante código se generan recortes de dimensión (640 x 640) pixeles, generando una base de datos de 1462 imágenes con zonas verdes.</div>
 
-<div style="font-size: 5px;">Configuramos la exportación comenzando con la selección del zoom a 21 y georeferenciación de la imagen en formato W, seleccionamos la salida de la imagen en formato .JPG</div><br>
+<div style="font-size: 5px;">Aqui encontraras el codigo utilizado para entrenar y validar la arquitectura de YOLOnV8, y luego podras utilizar el modelo entrenado para detectar zonas verdes en nuevas imagenes satelitales.</div>
 
-<div style="font-size: 5px;">Al final generamos una imagen .jpg con dimensiones de ancho=5333px y alto=2573px, YOLO recibe imagenes de 416px para eso vamos a dividir la imagenes obteniendo una matrix de 12x6 para un total de 72 imagenes.</div>
+<div style="font-size: 5px;">En la carpeta Dataset encontraras las imagenes con las que se entreno y valido el modelo, tambien para evitar entrenar nuevamente el modelo, se descargo el archivo "best.pt" generalmente se refiere a un punto de control (checkpoint) del modelo que ha sido guardado durante el entrenamiento y se considera el mejor en términos de su rendimiento en un conjunto de datos de validación.</div>
+
+<div style="font-size: 5px;">En la carpeta codigo_segmentacion encontraras el codigo desarrollado en conda python para generar la base de datos de imagenes, el cual toma una o varias imagenes satelitales, las recorta, procesa, segmenta y genera las etiquetas en formato YOLO.</div>
 
 
 !git clone https://github.com/danielcamilor07/Yolo_img_satelital.git
